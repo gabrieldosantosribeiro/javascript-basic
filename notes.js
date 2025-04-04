@@ -423,3 +423,28 @@ console.log(pessoa1)
 
 pessoa1.adicionarAmigo(pessoa2)
 console.log(pessoa1)
+
+//--------------------------------------------------------------------------------------
+
+// clases ES6
+
+class Pessoa {
+    constructor(nome, sobrenome, nascimento) {
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.nascimento = new Date(nascimento)
+    }
+
+    obterNomeCompleto() {
+        return `${this.nome} ${this.sobrenome}`
+    }
+}
+
+class Cliente extends Pessoa {
+    constructor(nome, sobrenome, nascimento, saldo) {
+        super(nome, sobrenome, nascimento)
+        this.saldo = saldo
+    }
+}
+
+const cliente1 = new Cliente('joao', 'silva', '7-8-2000', 1000)
