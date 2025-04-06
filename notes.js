@@ -448,3 +448,13 @@ class Cliente extends Pessoa {
 }
 
 const cliente1 = new Cliente('joao', 'silva', '7-8-2000', 1000)
+
+//--------------------------------------------------------------------------------------
+
+// API(aplication programming interface) - conjunto de rotas(endpoints) para obter ou enviar dados
+
+// requisições HTTP:
+// GET - buscar informações
+// POST - adicionar algo novo
+// PUT/PATCH - atualizar alguma coisa
+// DELETE - deletar alguma coisa
