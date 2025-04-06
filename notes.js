@@ -449,6 +449,28 @@ class Cliente extends Pessoa {
 
 const cliente1 = new Cliente('joao', 'silva', '7-8-2000', 1000)
 
+
+//--------------------------------------------------------------------------------------
+
+// função callback - função passada como parametro
+
+function dizerOla(nome) {
+    console.log(`olá, ${nome}!`)
+}
+
+function processarUsuario(callback) {
+    const nome = 'gabriel'
+    callback(nome)
+}
+
+processarUsuario(dizerOla()) // dentro de processarUsuario, a função dizerOla é chamada
+
+
+//--------------------------------------------------------------------------------------
+
+
+
+
 //--------------------------------------------------------------------------------------
 
 // API(aplication programming interface) - conjunto de rotas(endpoints) para obter ou enviar dados
@@ -458,3 +480,21 @@ const cliente1 = new Cliente('joao', 'silva', '7-8-2000', 1000)
 // POST - adicionar algo novo
 // PUT/PATCH - atualizar alguma coisa
 // DELETE - deletar alguma coisa
+
+// criando uma api simples
+
+// bibliotecas nativas
+const http = require('http') // biblioteca do node para criar servidores HTTP
+
+// banco de dados (em memória)
+let notas = [
+    { id: 1, titulo: 'Estudar JS', conteudo: 'Revisar funções e objetos' },
+    { id: 2, titulo: 'Ler livro', conteudo: 'Capítulo 3 de Clean Code' }
+]
+
+// criação do servidor/API
+const sever = http.createServer((req, res) => {
+    const { method, url} = req
+
+
+})
