@@ -468,7 +468,43 @@ processarUsuario(dizerOla()) // dentro de processarUsuario, a função dizerOla 
 
 //--------------------------------------------------------------------------------------
 
+// setTimeout
+setTimeout(() => {
+    console.log('teste') // código que vai ser feito depois do delay
+}, 1000) // 1000 é o delay - em milissegundo(ms)
 
+
+
+//--------------------------------------------------------------------------------------
+
+// promise - é tipo uma promessa de que algo vai acontecer no futuro, geralmente é usada para trabalhar com código assíncrono
+
+// para criar uma promessa instanciamos a classe Promise(nativa)
+// argumentos resolve(solução), reject(erro)
+// .then - encadear mais processos
+
+// estados:
+// pending   - ainda está processando
+// fulfilled - deu certo (resolveu)
+// reject    - deu errado (rejeitou)
+
+const minhaPromise = new Promise((resolve, reject) => { // cria a promise
+    let sucesso = true
+
+    if (sucesso) {
+        resolve('deu tudo certo!') // muda o estado da promise de pending para fulfilled
+    } else {
+        reject('algo deu errado...') // muda o estado da promise de pending para reject
+    }
+})
+
+minhaPromise
+    .then((mensagem) => {
+        console.log(mensagem) // se der certo
+    })
+    .catch((erro) => {
+        console.log(erro) // se der erro
+    })
 
 
 //--------------------------------------------------------------------------------------
@@ -485,6 +521,7 @@ processarUsuario(dizerOla()) // dentro de processarUsuario, a função dizerOla 
 
 // bibliotecas nativas
 const http = require('http') // biblioteca do node para criar servidores HTTP
+const { resolve } = require('path')
 
 // banco de dados (em memória)
 let notas = [
