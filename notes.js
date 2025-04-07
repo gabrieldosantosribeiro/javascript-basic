@@ -471,7 +471,7 @@ processarUsuario(dizerOla()) // dentro de processarUsuario, a função dizerOla 
 // setTimeout
 setTimeout(() => {
     console.log('teste') // código que vai ser feito depois do delay
-}, 1000) // 1000 é o delay - em milissegundo(ms)
+}, 1000) // 1000 é o delay - em milissegundo(ms)\
 
 
 
